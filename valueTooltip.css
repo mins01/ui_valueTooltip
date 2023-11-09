@@ -5,6 +5,9 @@
     display: inline-block;
     vertical-align: middle;
 }
+.value-tooltip-form-control{
+    vertical-align: middle;
+}
 .value-tooltip-wrap.value-tooltip-wrap-block{
     display: block;
     
@@ -21,15 +24,17 @@
     align-content: center;
     justify-content: center;
     align-items: center;
+
+    text-align: center;
 }
 .value-tooltip-wrap .value-tooltip::after{
     content: attr(data-value-tooltip-prefix)attr(data-value-tooltip-data)attr(data-value-tooltip-suffix);
-    background-color: #999999aa;
+    /* background-color: #999999aa; */
     padding:0 0.5em;
     border-radius: 0.5em;
     min-width: 4em;
     max-width: 90%;
-    text-align: center;
+    /* text-align: center; */
 
     overflow: hidden;
     text-overflow: ellipsis;
@@ -55,10 +60,12 @@
     bottom: -1em;
 }
 .value-tooltip.value-tooltip-left{
-    left:1em;
+    left:0;
     right:auto;
+    text-align: left;
 }
 .value-tooltip.value-tooltip-right{
     left:auto;
-    right:1em;
+    right:0;
+    text-align: right;
 }

@@ -57,11 +57,32 @@
         <h4>value-tooltip-center (default)</h4>
         <div class="value-tooltip-wrap">
             <div class="value-tooltip" data-value-tooltip-data="yy"></div>
-            <input type="range" class="form-control value-tooltip-form-control" value="" min="-100" max="100">
+            <input type="range" class="value-tooltip-form-control" value="" min="-100" max="100">
         </div>
         <div class="value-tooltip-wrap">
             <div class="value-tooltip value-tooltip-center" data-value-tooltip-data="yy"></div>
             <input type="range" class="form-control value-tooltip-form-control" value="10" min="-100" max="100">
+        </div>
+        <hr>
+        <h4>bootstrap form-control</h4>
+
+        <div class="value-tooltip-wrap form-control m-1">
+            <div class="value-tooltip" data-value-tooltip-data="yy"></div>
+            <input type="range" class="w-100 value-tooltip-form-control" value="" min="-100" max="100">
+        </div>
+        <div class="form-inline">
+            <div class="value-tooltip-wrap form-control m-1">
+                <div class="value-tooltip" data-value-tooltip-data="yy"></div>
+                <input type="range" class="w-100 value-tooltip-form-control" value="" min="-100" max="100">
+            </div>
+            <div class="value-tooltip-wrap form-control m-1">
+                <div class="value-tooltip value-tooltip-top" data-value-tooltip-data="yy"></div>
+                <input type="range" class="w-100 value-tooltip-form-control" value="" min="-100" max="100">
+            </div>
+            <div class="value-tooltip-wrap form-control m-1">
+                <div class="value-tooltip value-tooltip-right value-tooltip-bottom" data-value-tooltip-data="yy"></div>
+                <input type="range" class="w-100 value-tooltip-form-control" value="" min="-100" max="100">
+            </div>
         </div>
         <hr>
         <h4>value-tooltip-top</h4>
@@ -105,7 +126,7 @@
         </div>
         <hr>
         <h4>data-value-tooltip-prefix , data-value-tooltip-suffix</h4>
-        <div class="value-tooltip-wrap">
+        <div class="value-tooltip-wrap" style="width: 300px;">
             <div class="value-tooltip " data-value-tooltip-prefix="[접두어]:" data-value-tooltip-suffix=":[접미사]"></div>
             <input type="range" class="form-control value-tooltip-form-control" value="100000" min="-1000000" max="1000000">
         </div>
@@ -153,7 +174,7 @@
         
         <div class="value-tooltip-wrap">
             <div class="value-tooltip value-tooltip-center" data-value-tooltip-data="yy"></div>
-            <input type="color" class="form-control value-tooltip-form-control" value="#000000">
+            <input type="color" class="form-control value-tooltip-form-control" value="#000000" style="width:6em;">
         </div>
         
         <div class="value-tooltip-wrap">
