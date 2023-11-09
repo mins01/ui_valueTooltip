@@ -48,18 +48,17 @@
 	<div class="container">
         <h1>ui_valueTooltop</h1>
         <hr>
-
-        <div class="value-tooltip-wrap ">
-            <div class="value-tooltip value-tooltip-center" data-value-tooltip-data="yy"></div>
-            <input type="text" class="form-control value-tooltip-form-control" value="text">
-        </div>
-        <hr>
-        <div class="value-tooltip-wrap">
-            <div class="value-tooltip value-tooltip-center" data-value-tooltip-data="yy"></div>
-            <input type="number" class="form-control value-tooltip-form-control" value="999">
-        </div>
+        form-control 의 value를 툴팁으로 보여준다.<br>
+        input[type="range"] 인 경우 상세 값을 알기 힘들어서 만들었다.<br>
+        툴팁의 내용은 줄바꿈 제거해서 보여진다.<br>
+        너무 길면 말 줄임표로 표시된다.<br>
+        툴팁은 선택할 수 없다.
         <hr>
         <h4>value-tooltip-center (default)</h4>
+        <div class="value-tooltip-wrap">
+            <div class="value-tooltip" data-value-tooltip-data="yy"></div>
+            <input type="range" class="form-control value-tooltip-form-control" value="" min="-100" max="100">
+        </div>
         <div class="value-tooltip-wrap">
             <div class="value-tooltip value-tooltip-center" data-value-tooltip-data="yy"></div>
             <input type="range" class="form-control value-tooltip-form-control" value="10" min="-100" max="100">
@@ -109,6 +108,57 @@
         <div class="value-tooltip-wrap">
             <div class="value-tooltip " data-value-tooltip-prefix="[접두어]:" data-value-tooltip-suffix=":[접미사]"></div>
             <input type="range" class="form-control value-tooltip-form-control" value="100000" min="-1000000" max="1000000">
+        </div>
+        <hr>
+        <h4>value-tooltip-wrap-block</h4>
+        <div class="value-tooltip-wrap value-tooltip-wrap-block">
+            <div class="value-tooltip "></div>
+            <input type="range" class="form-control value-tooltip-form-control" value="100000" min="-1000000" max="1000000">
+        </div>
+        <hr>
+        <h4>기타 form-control</h4>
+        <div class="value-tooltip-wrap ">
+            <div class="value-tooltip value-tooltip-center" data-value-tooltip-data="yy"></div>
+            <input type="text" class="value-tooltip-form-control" value="text">
+        </div>
+        <div class="value-tooltip-wrap ">
+            <div class="value-tooltip value-tooltip-center" data-value-tooltip-data="yy"></div>
+            <input type="text" class="form-control value-tooltip-form-control" value="text">
+        </div>
+        
+        <div class="value-tooltip-wrap">
+            <div class="value-tooltip value-tooltip-center" data-value-tooltip-data="yy"></div>
+            <input type="number" class="form-control value-tooltip-form-control" value="999">
+        </div>
+        
+        <div class="value-tooltip-wrap">
+            <div class="value-tooltip value-tooltip-center" data-value-tooltip-data="yy"></div>
+            <input type="date" class="form-control value-tooltip-form-control" value="2023-11-09">
+        </div>
+        
+        <div class="value-tooltip-wrap">
+            <div class="value-tooltip value-tooltip-center" data-value-tooltip-data="yy"></div>
+            <input type="datetime-local" class="form-control value-tooltip-form-control" value="2023-11-09T15:15">
+        </div>
+        
+        <div class="value-tooltip-wrap">
+            <div class="value-tooltip value-tooltip-center" data-value-tooltip-data="yy"></div>
+            <input type="month" class="form-control value-tooltip-form-control" value="2023-11">
+        </div>
+        
+        <div class="value-tooltip-wrap">
+            <div class="value-tooltip value-tooltip-center" data-value-tooltip-data="yy"></div>
+            <input type="time" class="form-control value-tooltip-form-control" value="15:15">
+        </div>
+        
+        <div class="value-tooltip-wrap">
+            <div class="value-tooltip value-tooltip-center" data-value-tooltip-data="yy"></div>
+            <input type="color" class="form-control value-tooltip-form-control" value="#000000">
+        </div>
+        
+        <div class="value-tooltip-wrap">
+            <div class="value-tooltip value-tooltip-center" data-value-tooltip-data="yy"></div>
+            <textarea class="form-control value-tooltip-form-control">테스트내용입니다.</textarea>
         </div>
         <hr>
 	</div>
