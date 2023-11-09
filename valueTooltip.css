@@ -1,0 +1,57 @@
+@charset "utf-8";
+
+.value-tooltip-wrap{
+    position: relative;
+}
+
+.value-tooltip-wrap .value-tooltip{
+    z-index: 1;
+    pointer-events: none;
+    position: absolute;
+    left:0;right:0;top:0;bottom:0;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+.value-tooltip-wrap .value-tooltip::after{
+    content: attr(data-value-tooltip-prefix)attr(data-value-tooltip-data)attr(data-value-tooltip-suffix);
+    background-color: #99999933;
+    padding:0 0.5em;
+    border-radius: 10em;
+    min-width: 4em;
+    max-width: 90%;
+    text-align: center;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.value-tooltip.value-tooltip-center {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+.value-tooltip.value-tooltip-top {
+    top: -1em;
+    bottom:auto;
+}
+.value-tooltip.value-tooltip-bottom{
+    top:auto;
+    bottom: -1em;
+}
+.value-tooltip.value-tooltip-left{
+    left:1em;
+    right:auto;
+}
+.value-tooltip.value-tooltip-right{
+    left:auto;
+    right:1em;
+}
