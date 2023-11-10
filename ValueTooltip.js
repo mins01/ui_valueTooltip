@@ -30,16 +30,16 @@ class ValueTooltip{
         if(this.activated){console.log('already activated'); return;}
         this.activated = true;
         this.container = container;
-        this.container.addEventListener('input',this.eventHnadler);
-        this.container.addEventListener('change',this.eventHnadler);
-        this.container.addEventListener('compositionupdate',this.eventHnadler);
+        this.container.addEventListener('input',this.eventHandler);
+        this.container.addEventListener('change',this.eventHandler);
+        this.container.addEventListener('compositionupdate',this.eventHandler);
     }
     removeEventListener(){
         if(!this.activated){console.log('already deactivated'); return;}
         this.activated = false;
-        this.container.removeEventListener('input',this.eventHnadler);
-        this.container.removeEventListener('change',this.eventHnadler);
-        this.container.removeEventListener('compositionupdate',this.eventHnadler);
+        this.container.removeEventListener('input',this.eventHandler);
+        this.container.removeEventListener('change',this.eventHandler);
+        this.container.removeEventListener('compositionupdate',this.eventHandler);
     }
 
     initialize(){
@@ -48,7 +48,7 @@ class ValueTooltip{
         });
     }
 
-    eventHnadler = (event)=>{
+    eventHandler = (event)=>{
         const target = event.target;
         if(!target.classList.contains('value-tooltip-form-control')){return}
         this.setData(target);
