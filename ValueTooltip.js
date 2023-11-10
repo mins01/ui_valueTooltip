@@ -1,7 +1,7 @@
 class ValueTooltip{
     static instance = null;
 
-    container = null;
+    listener = null;
     activated = false;
     constructor(){
         
@@ -22,28 +22,29 @@ class ValueTooltip{
     static deactivate(){
         this.getInstance().removeEventListener()
     }
-    
+    static sync(target){
+        this.getInstance().setData(target);
+    }
 
 
-
-    addEventListener(container){
+    addEventListener(listener){
         if(this.activated){console.log('already activated'); return;}
         this.activated = true;
-        this.container = container;
-        this.container.addEventListener('input',this.eventHandler);
-        this.container.addEventListener('change',this.eventHandler);
-        this.container.addEventListener('compositionupdate',this.eventHandler);
+        this.listener = listener;
+        this.listener.addEventListener('input',this.eventHandler);
+        this.listener.addEventListener('change',this.eventHandler);
+        this.listener.addEventListener('compositionupdate',this.eventHandler);
     }
     removeEventListener(){
         if(!this.activated){console.log('already deactivated'); return;}
         this.activated = false;
-        this.container.removeEventListener('input',this.eventHandler);
-        this.container.removeEventListener('change',this.eventHandler);
-        this.container.removeEventListener('compositionupdate',this.eventHandler);
+        this.listener.removeEventListener('input',this.eventHandler);
+        this.listener.removeEventListener('change',this.eventHandler);
+        this.listener.removeEventListener('compositionupdate',this.eventHandler);
     }
 
     initialize(){
-        this.container.querySelectorAll('.value-tooltip-form-control').forEach((el) => {
+        this.listener.querySelectorAll('.value-tooltip-form-control').forEach((el) => {
             this.setData(el);
         });
     }
@@ -53,6 +54,7 @@ class ValueTooltip{
         if(!target.classList.contains('value-tooltip-form-control')){return}
         this.setData(target);
     }
+    
     setData(target){
         const wrap = target.closest('.value-tooltip-wrap');
         if(!wrap){return false}

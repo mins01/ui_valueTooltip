@@ -140,6 +140,15 @@
             <input type="range" class="form-control value-tooltip-form-control" value="100000" min="-1000000" max="1000000">
         </div>
         <hr>
+        <h4>ValueTooltip.sync(target) // target.value 를 스크립트로 변경하는 경우 값을 연동</h4>
+        <div class="value-tooltip-wrap value-tooltip-wrap-block">
+            <div class="value-tooltip "></div>
+            <input type="range" class="form-control value-tooltip-form-control"  id="xxcasdiodsu90132" value="100000" min="-1000000" max="1000000">
+        </div>
+        <button class="btn btn-info" onclick="document.querySelector('#xxcasdiodsu90132').value = parseInt(document.querySelector('#xxcasdiodsu90132').value)+1;">+1 as script</button>
+        <button class="btn btn-info" onclick="ValueTooltip.sync(document.querySelector('#xxcasdiodsu90132'))">sync</button>
+        <button class="btn btn-info" onclick="document.querySelector('#xxcasdiodsu90132').value = parseInt(document.querySelector('#xxcasdiodsu90132').value)+1; ValueTooltip.sync(document.querySelector('#xxcasdiodsu90132'))">+1 as script and sync</button>
+        <hr>
         <h4>기타 form-control</h4>
         <div class="value-tooltip-wrap ">
             <div class="value-tooltip value-tooltip-center" data-value-tooltip-data="yy"></div>
